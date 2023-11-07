@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Search Results</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Restaurant Search Results</h1>
+        <ul>
+            {% for restaurant in restaurants %}
+            <li>
+                <h3>{{ restaurant['name']}}</h3>
+                
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Search Results</title>
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='styls.css') }}">
+<body>
+    <h1>Restaurant Search Results</h1>
+    <ul>
+        {% for restaurant in restaurants %}
+        <li>{{restaurant['name']}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html> -->
+

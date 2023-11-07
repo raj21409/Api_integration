@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+    <h1>Restaurant Search</h1>
+    <form action="{{ url_for('views.home') }}" method="POST">
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location" required><br><br>
+        
+        <label for="cuisine">Cuisine:</label>
+        <input type="text" name="cuisine" id="cuisine" required><br><br>
+        
+        <input type="submit" value="Search">
+    </form> 
+    {% endblock %}
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    
+
+    
